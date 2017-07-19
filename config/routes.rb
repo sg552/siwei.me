@@ -1,11 +1,16 @@
 # -*- encoding : utf-8 -*-
 PersonalSite::Application.routes.draw do
+
+  get '/interface/blogs/all', :to => 'interface::blogs#all', :as => 'interface_blogs_all'
+  get '/interface/blogs/show', :to => 'interface::blogs#show', :as => 'interface_blogs_show'
+
   # 这个东西不能省略, 否则会报错
   mount Refinery::Core::Engine, :at => '/'
   root :to => 'pages#home', :via => :get
   post 'pages/preview'     => 'pages#preview', :as => :preview_pages
   match 'pages/*path/preview' => 'pages#preview', :as => :preview_page,  :via => [:get, :put]
   get '/pages/:id', :to => 'pages#show', :as => :page
+
 
   namespace :admin, :path => 'refinery' do
     get 'pages/*path/edit', :to => 'pages#edit'

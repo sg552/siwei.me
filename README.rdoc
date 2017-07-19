@@ -19,7 +19,7 @@ then visit http://localhost:3888/refinery to login,
 
 default user: admin
 
-default password: 123456
+default password: 88888888
 
 Have fun!
 

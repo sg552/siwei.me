@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://gems.ruby-china.org/
   specs:
     actionmailer (3.2.7)
       actionpack (= 3.2.7)
@@ -243,7 +243,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano (= 2.12.0)
   capistrano-rbenv (= 1.0.1)
-  coffee-rails (~> 3.2.1)
+  coffee-rails (= 3.2.2)
   factory_girl (= 2.6.4)
   factory_girl_rails (= 1.7.0)
   jquery-rails (= 2.0.2)
@@ -255,7 +255,10 @@ DEPENDENCIES
   refinerycms-blog (= 2.0.4)
   refinerycms-i18n (= 2.0.2)
   rspec-rails (= 2.9.0)
-  sass-rails (~> 3.2.3)
-  therubyracer
+  sass-rails (= 3.2.6)
+  therubyracer (= 0.12.1)
   thin (= 1.6.1)
-  uglifier (>= 1.0.3)
+  uglifier (= 2.2.1)
+
+BUNDLED WITH
+   1.13.2

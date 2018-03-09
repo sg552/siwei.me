@@ -3,6 +3,7 @@ PersonalSite::Application.routes.draw do
 
   get '/interface/blogs/all', :to => 'interface::blogs#all', :as => 'interface_blogs_all'
   get '/interface/blogs/show', :to => 'interface::blogs#show', :as => 'interface_blogs_show'
+  post '/interface/blogs/add_comment', :to => 'interface::blogs#add_comment', :as => 'interface_blogs_add_comment'
 
   # 这个东西不能省略, 否则会报错
   mount Refinery::Core::Engine, :at => '/'

@@ -13,7 +13,8 @@ module Refinery
 
       def index
         # Rss feeders are greedy. Let's give them every blog post instead of paginating.
-        (@posts = Post.live.includes(:comments, :categories).all) if request.format.rss?
+        (@posts = Post.live.includes(:comments, :categories)
+          .where('title not like ?', '%[**]%')) if request.format.rss?
         respond_with (@posts) do |format|
           format.html
           format.rss

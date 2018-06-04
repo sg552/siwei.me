@@ -35,7 +35,9 @@ module Refinery
       attr_accessible :browser_title, :meta_keywords, :meta_description, :user_id, :category_ids
       attr_accessible :source_url, :source_url_title
 
-      self.per_page = Refinery::Blog.posts_per_page
+      #self.per_page = Refinery::Blog.posts_per_page
+      ## 这个东西居然是用来分页的.我无语了
+      self.per_page = 500
 
       def next
         self.class.next(self)

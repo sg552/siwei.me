@@ -28,7 +28,17 @@
       <% end %>
     </section>
   </header>
-  <%= @post.body.html_safe %>
+  <% if @post.title.include?('[**]') %>
+    <% if refinery_user? %>
+      <%= @post.body.html_safe %>
+    <% else %>
+      您好, 带有 [**] 标题的,都是机密内容. 抱歉无法公开.
+      如果确实想看的话, 请联系我的微信.
+    <% end %>
+  <% else %>
+    <%= @post.body.html_safe %>
+
+  <% end %>
 
   <% if Refinery::Blog::Post::ShareThis.enabled? %>
     <span class="st_sharethis" displayText="ShareThis"></span>

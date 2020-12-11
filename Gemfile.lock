@@ -1,5 +1,5 @@
 GEM
-  remote: https://gems.ruby-china.org/
+  remote: https://gems.ruby-china.com/
   specs:
     actionmailer (3.2.7)
       actionpack (= 3.2.7)
@@ -98,7 +98,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.10.1)
-    mysql2 (0.3.11)
+    mysql2 (0.3.21)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -249,7 +249,7 @@ DEPENDENCIES
   jquery-rails (= 2.0.2)
   json (= 1.7.4)
   log4r (= 1.1.9)
-  mysql2 (= 0.3.11)
+  mysql2 (= 0.3.21)
   rails (= 3.2.7)
   refinerycms (= 2.0.5)
   refinerycms-blog (= 2.0.4)
@@ -261,4 +261,4 @@ DEPENDENCIES
   uglifier (= 2.2.1)
 
 BUNDLED WITH
-   1.12.5
+   1.17.1
